@@ -1,0 +1,29 @@
+<html ng-app="myFirstModule">
+  <head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="WorkersController.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="EmployeesController">
+      <table>
+        <thead>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Salary</th>
+        </thead>
+        <tbody>
+          <!-- orderBy filter: iako originalan poredak u employees kolekciji nije promenjen, u tabeli će biti prikazan sortiran prema lastName property-ju -->
+          <tr ng-repeat="empl in data.employees | orderBy:'lastName'">
+            <td>{{ empl.firstName }}</td>
+            <td>{{ empl.lastName }}</td>
+            <!-- currency filter: iako su podaci 100, 300 i 200 ispisuju se kao USD$100, USD$300 i USD$200 -->
+            <td>{{ empl.salary|currency:"USD$" }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </body>
+</html>

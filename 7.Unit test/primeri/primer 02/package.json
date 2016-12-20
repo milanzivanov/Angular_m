@@ -1,0 +1,8 @@
+{
+  "author": "Nikola",
+  "name": "test-primer1",
+  "devDependencies": {
+    "karma": "latest",
+    "karma-jasmine": "^0.2.2"
+  }
+}

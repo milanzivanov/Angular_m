@@ -1,0 +1,19 @@
+<div ng-controller="EmployeeListController as ec">
+<table id="employeeTable" class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Jmbg</th>
+            <th>Name</th>
+            <th>Surname</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in ec.employees">
+            <td>{{employee.jmbg}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.surname}}</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" ng-click="ec.goToAdd()">Add employee</button>
+</div>

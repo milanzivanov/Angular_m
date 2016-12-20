@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI Bootstrap example</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container">
+	<h2 class="col-xs-offset-2">UI Bootstrap example</h2>
+    <br/>
+    <ng-view></ng-view>
+</div>
+<script src="./assets/js/angular.js"></script>
+<script src="./assets/js/angular-route.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/components/place/place.module.js"></script>
+<script src="./app/components/place/place.service.js"></script>
+<script src="./app/components/employee/employee.module.js"></script>
+<script src="./app/components/employee/employee.routes.js"></script>
+<script src="./app/components/employee/employee-list.controller.js"></script>
+<script src="./app/components/employee/employee-detail.controller.js"></script>
+<script src="./app/components/employee/employee.service.js"></script>
+</body>
+</html>

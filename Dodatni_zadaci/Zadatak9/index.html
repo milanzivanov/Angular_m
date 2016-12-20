@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="winesModule" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WineCellar</title>
+
+  <script src="angular.js"></script>
+  <script src="angular-ui-router.js"></script>
+  <script src="app.js"></script>
+
+</head>
+<body>
+  <h1>Wine cellar</h1>
+
+  <a ui-sref="main">Main</a>
+  <a ui-sref="wines">Wines</a>
+  <a ui-sref="addWine">Add wine</a>
+    
+  <div ui-view></div>  
+
+</body>
+</html>

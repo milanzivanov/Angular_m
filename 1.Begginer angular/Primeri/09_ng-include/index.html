@@ -1,0 +1,11 @@
+<html ng-app>
+  <head>
+    <script src="angular.js"></script>  
+  </head>
+  <body>
+    <h1>ng-include example</h1>
+    <!-- ceo sadržaj iz LoremIpsum.html se ugrađuje u index.html (može se vidiet u konzoli: desni klik -> inspect element)-->
+    <!-- jednostruki navodnici se stavljaju da Angular ovo ne bi shvatio kao izraz već kao string koji označava ime stranice -->
+    <div ng-include="'LoremIpsum.html'"></div>
+  </body>
+</html>

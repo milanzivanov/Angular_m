@@ -1,0 +1,20 @@
+<table class="table table-stripped">
+	<thead>
+		<th>Name</th>
+		<th>Year</th>
+		<th>Grapes</th>
+		<th>Country</th>
+		<th>Region</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="wine in wines">
+			<td>{{wine.name}}</td>
+			<td>{{wine.year}}</td>
+			<td>{{wine.grapes}}</td>
+			<td>{{wine.country}}</td>
+			<td>{{wine.region}}</td>
+			<td><a href="#/main/wines/{{wine._id}}">update</a></td>
+			<td><button class="btn btn-link" ng-click="deleteWine(wine._id)">delete</button></td>
+		</tr>
+	</tbody>
+</table>

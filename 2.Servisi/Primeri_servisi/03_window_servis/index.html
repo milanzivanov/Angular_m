@@ -1,0 +1,14 @@
+<html ng-app="myFirstModule">
+  <head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="NavigationController.js"></script>
+  </head>
+  <body ng-controller="NavigationController">
+    <h1>Navigation example</h1>    
+    <!-- Klik na dugme izazvaće redirekciju na LoremIpsum.html (funkcija $scope.redirect)-->
+    <div><button type="button" ng-click="redirect()">LoremIpsum</button></div>
+    <!-- Klik na dugme izazvaće alert (funkcija $scope.alert) -->
+    <div><button type="button" ng-click="alert()">Alert</button></div>
+  </body>
+</html>

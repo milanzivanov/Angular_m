@@ -1,0 +1,14 @@
+<ul class="nav nav-sidebar nav-sidebar-padding sideBar" ng-controller="SideBarController as sbc">
+    <li ng-class="{activeItem:sbc.isActive('home')}">
+        <a ng-href="#/home"><span>Home</span></a>
+    </li>
+    <li ng-class="{activeItem:sbc.isActive('about')}">
+        <a ng-href="#/about"><span>About</span></a>
+    </li>
+    <li ng-class="{activeItem:sbc.isActive('company')}">
+        <a ng-href="#/company"><span>Companies</span></a>
+    </li>
+    <li ng-class="{activeItem:sbc.isActive('employee')}">
+        <a ng-href="#/employee"><span>Employees</span></a>
+    </li>
+</ul>

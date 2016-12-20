@@ -1,0 +1,38 @@
+<html ng-app="winesModule">
+<head>
+	<title>Zadatak 1</title>
+	<script src="angular.js"></script>    
+	<script src="app.js"></script>
+	<script src="WinesController.js"></script>
+</head>
+<body ng-controller="WinesController">
+	<h1> {{message}} </h1>
+
+	<div>
+		<input type="text" ng-model="userInput">
+		<button ng-click="doClick()">Click me</button>
+	</div>
+
+	<div>
+		<table>
+			<thead>
+				<th>Name</th>
+				<th>Year</th>
+				<th>Grapes</th>
+				<th>Country</th>
+				<th>Region</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="wine in wines">
+					<td>{{wine.name}}</td>
+					<td>{{wine.year}}</td>
+					<td>{{wine.grapes}}</td>
+					<td>{{wine.country}}</td>
+					<td>{{wine.region}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+</body>
+</html>

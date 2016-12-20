@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directives - controller, controllerAs, bindToController, require</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container">
+	<h2 class="col-xs-offset-2">Directives - controller, controllerAs, bindToController, require</h2>
+
+  <!-- kad imamo direktivu u koju stavljamo sadržaj onda moramo razmišljati o transclude atributu -->
+  <!-- kursevi-tabs i kursevi-pane imaju unutrašnji HTML što znači da u definiciji direktive treba transclude da bude true, kao i da postoji ng-transclude direktiva u HTMLu na čije mesto će doći unutrašnji sadržaj -->
+	<kursevi-tabs>
+	  	<kursevi-pane title="First tab">
+    		<h4>First tab</h4>
+    		<p>Lorem ipsum dolor sit amet</p>
+  		</kursevi-pane>
+  		<kursevi-pane title="Second tab">
+    		<h4>Second tab</h4>
+    		<em>Mauris elementum elementum enim at suscipit.</em>
+    		<p><a href ng-click="i = i + 1">counter: {{i || 0}}</a></p>
+  		</kursevi-pane>
+  		<kursevi-pane title="Third tab">
+    		<h4>Third tab</h4>
+    		<em>Aenean imperdiet. Etiam ultricies nisi vel augue.</em>
+    		<p><input type="text" ng-model="word"> - {{word}}</p>
+  		</kursevi-pane>
+	</kursevi-tabs>
+
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/directives/kurseviPane.directive.js"></script>
+<script src="./app/directives/kurseviTabs.directive.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<div>
+	<h2>Assignment</h2>
+	<p>
+		Make sure you read the <a href="#/about">About</a> page before starting your assignment.<br/>
+		Your assignment will be to take what we've learned today and apply it to your project.<br/>
+		<em>Note: </em> take special care to include all the javascript files in your index.html<br/>
+	</p>
+	<div class="assignment">
+		Complete the following exercises:
+		<ol>
+			<li>
+				Go through all the javascript files and make sure they adhere to the best practices of writing angular components:
+				<ol>
+					<li>Separate the code in different files so as to adhere to the "One component per file" rule (<em>Note:</em> be mindful of the naming convention used for file names);</li>
+					<li>Use self-invoking functions wherever necessary;</li>
+					<li>Use controller as sintax instead of the $scope object;</li>
+					<li>Inject your dependencies using the inline array or via the $inject property annotation;</li>
+					<li><b>Bonus:</b> create a nested view structure described in the previous lesson using the ui-router;</li>
+					<li><b>Bonus:</b> modify the add/edit form of both companies and employees so that the company/employee is retrieved/created during routing instead of inside the controller (<em>Note:</em> use the resolve property of the state object);</li>
+					<li><b>Bonus:</b> handle the case when an employee/company is requested but the database doesn't have the employee/company with the given id, <i>e.g.</i> display an alert and/or redirect to the home page;</li>
+				</ol>
+			</li>
+			<li>
+				Create a directory structure that adheres to the LIFT principle as well as the "Segment by application component" practice (<em>Note:</em> if you haven't done this in the previous step, make sure to adhere to the "One module per component" principle);
+			</li>
+			<li>
+				Replace the $http service with the $resource service;
+			</li>
+			<li>
+				Replace all external javascript dependencies and libraries with bower dependencies:
+				<ol>
+					<li>Form a bower.json file which has all the basic fields field out (<em>Note:</em> use the "bower init" command);</li>
+					<li>Fill in all the external dependencies;</li>
+					<li>Create a .bowerrc file to change the name of the directory where to download the dependencies, <i>e.g. assets/js</i>;</li>
+				</ol>
+			</li>
+			<li>
+				Use the gulpfile.js file from the last example of this lesson and modify it so that it works for your application (<em>Note:</em> make sure to modify the index.html file);
+			</li>
+			<li>
+				<b>Bonus:</b> create SASS files to edit the style of the application and expand the gulpfile.js file with plugins that compile SASS and minify CSS and incorporate them in your build process;
+			</li>
+			<li>
+				<b>Bonus:</b> read about JSHint and expand your gulpfile.js file with the appropriate plugin which you will incorporate in your build process;
+			</li>
+			<li>
+				Expand the application by adding a new component which acts as a place registry (<em>Note:</em> Since it's hard to debug minified files you should avoid using gulp (or at least the minification plugin) until you've developed and tested your code):
+				<ol>
+					<li>A place has two attributes, a name and a postal code, <i>e.g.</i> {name:'Novi Sad', code:'21000'} (<em>Note:</em> make sure to set the _id field of the entity to either name or code before persisting it);</li>
+					<li>A form to view all the registered places, which includes sort, search and pagination functionality;</li>
+					<li>A form to add/edit a place;</li>
+					<li>Update the side bar to include a link to the place registry;</li>
+					<li>Expand the company add/edit form so that there is a field named "headquarters" where the component for that field is a combobox which contains all the places (<em>Note:</em> combine ng-repeat with the option tag nested in the select tag to create a combobox);</li>
+					<li><b>Bonus:</b> repeat the above process for the employee by adding a "placeOfBirth" field;</li>
+					<li><b>Bonus:</b> expand the employee list view so that it displays the "placeOfBirth" field and searching by place (<em>Note:</em> use a combobox to search, so that you can either have employees from one place displayed or from all of them);</li>
+				</ol>
+			</li>
+			<li>
+				<b>Bonus:</b> add a "Revert" button on the add/edit form of the company, employee and place entity. What this button does is negate the changes you've made to the current company/employee/place, restoring the selected entity to it's initial state while remaining on the page (<em>Note:</em> read about angular.copy and use it to form a clone object when the form opens);
+			</li>
+		</ol>
+		<ul>
+			<li>Focus on doing non-bonus excercises during class;</b>
+			<li>What you don't complete during the class remains as a homework assignment;</li>
+			<li>It is highly recommended that you complete each of the listed excercises, including bonus excercises;</li>
+		</ul>
+	</div>
+</div>

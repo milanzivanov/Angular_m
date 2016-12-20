@@ -1,0 +1,10 @@
+<div class="tabbable">
+  <!-- zaglavlje tabova gde klikom na tab menjamo prikazan sadržaj -->
+  <ul class="nav nav-tabs">
+    <li ng-repeat="pane in kt.panes" ng-class="{active:pane.selected}">
+      <a href="" ng-click="kt.select(pane)">{{pane.title}}</a>
+    </li>
+  </ul>
+  <!-- transclude, gde prikazujemo ono što je navedeno unutar kursevi-tabs HTMLa u index.html datoteci -->
+  <div class="tab-content" ng-transclude></div>
+</div>

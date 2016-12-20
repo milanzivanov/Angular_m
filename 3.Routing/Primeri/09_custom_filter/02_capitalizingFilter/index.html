@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="filterTestModule" lang="en">
+<head>
+  <title>Custom filter</title>
+
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <script src="myController.js"></script>
+  <script src="capitalizingFilter.js"></script>
+
+</head>
+<body>
+  
+  <h1>Custom filter example</h1>
+  
+  <div ng-controller="myController">
+    Original words:
+    <ul ng-repeat="word in array">
+      <li>{{word}}</li>
+    </ul>  
+  
+    First letter capitalized (default):
+    <ul ng-repeat="word in array">
+      <li>{{word | capitalize}}</li>
+    </ul>
+
+    Third letter capitalized:
+    <ul ng-repeat="word in array">
+      <li>{{word | capitalize:3}}</li>
+    </ul>  
+
+  </div>
+
+  
+  
+</body>
+</html>

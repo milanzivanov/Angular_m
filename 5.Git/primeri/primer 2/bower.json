@@ -1,0 +1,13 @@
+{
+  "name": "primer 2",
+  "version": "0.0.0",
+  "authors": [
+    "Luburic"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-dynamic-locale": "~0.1.27",
+    "angular-i18n": "~1.4.6"
+  }
+}

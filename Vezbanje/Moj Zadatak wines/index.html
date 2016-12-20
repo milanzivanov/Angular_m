@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="wineModule">
+<head>
+    <meta charset="utf-8">
+    <meta type="viewport" content="width=display-width, initial-scale=1">
+    <title>Moj Zadatak Wine Cellar</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+
+</head>
+<body>
+
+    <h1 style="text-align: center">Aplikacija za kontrolu prikaza vina</h1>
+    
+    <div ui-view></div>
+
+
+
+
+    <script src="./assets/js/angular.js"></script>
+    <script src="./assets/js/angular-ui-router.js"></script>
+    <script src="./assets/js/jquery-1.11.0.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+
+    <script src="./app/app.module.js"></script>
+    <script src="./app/wines/wines.controller.js"></script>
+    <script src="./app/wines/WineData.service.js"></script>
+    <script src="./app/wines/wines.router.js"></script>
+    <script src="./app/wines/addWine.controller.js"></script>
+
+</body>
+</html>

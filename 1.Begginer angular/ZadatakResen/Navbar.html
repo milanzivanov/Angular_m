@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">           
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">Restaurants</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">  
+        <!-- Navbar.html je ugnježden u MainController (za njega će se formirati child scope u okviru MainController-a). Ali pošto je showPanels.showAddRestaurant u MainControlleru složeni objekat, možemo manipulisati njime bez $parent -->
+        <li><a href="#" ng-click="showPanels.showAddRestaurant=false; showPanels.showRestaurantTable=true;"><span class="glyphicon glyphicon-home"></span>Home</a></li>
+        <li><a href="#" ng-click="showPanels.showAddRestaurant=true; showPanels.showRestaurantTable=false;">Add restaurant</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicons glyphicons-circle-info"></span>About us</a></li>       
+      </ul>
+    </div>
+
+  </div>
+</nav>

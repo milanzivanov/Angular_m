@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directives - isolated scope</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="MainAppController as ma">
+	<h1 class="col-xs-offset-2">Directives - isolated scope</h2>
+	<h2>Controller scope</h2>
+	<p>
+		Name: {{ma.boban.name}} {{ma.boban.surname}}</br>
+		Email: {{ma.boban.email}}</br></br>
+		Name: <input ng-model="ma.boban.name" type="text">
+		Surname: <input ng-model="ma.boban.surname" type="text">
+		Email: <input ng-model="ma.boban.email" type="text">
+	</p>
+	<h2>Directive isolated scope</h2>
+	<isolated-scope employee="ma.boban" input-title="{{ma.bobanTitle}}"></isolated-scope>
+	<isolated-scope employee="ma.leonora" input-title="{{ma.leonoraTitle}}"></isolated-scope>
+	<isolated-scope employee="ma.aleksandar" input-title="{{ma.aleksandarTitle}}"></isolated-scope>
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/controllers/app.controller.js"></script>
+<script src="./app/directives/isolatedScope.directive.js"></script>
+</body>
+</html>

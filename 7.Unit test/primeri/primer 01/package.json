@@ -1,0 +1,9 @@
+{
+  "author": "Nikola",
+  "name": "test-primer1",
+  "devDependencies": {
+    "karma": "^0.13.14",
+    "karma-jasmine": "^0.2.2",
+    "karma-chrome-launcher": "^0.2.1"
+  }
+}

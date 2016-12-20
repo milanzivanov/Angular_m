@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The new IMDB</title>
+	<link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/colors.css" rel="stylesheet">
+</head>
+<body ng-app="new-imdb">
+	<div class="container">
+		<div class="row" ui-view="header"></div>
+		<div class="row" ui-view="content"></div>
+	</div>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/angular-messages/angular-messages.js"></script>
+	<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="app/components/core/core.module.js"></script>
+	<script src="app/components/core/core.route.js"></script>
+	<script src="app/components/movie/movie.module.js"></script>
+	<script src="app/components/movie/movie.route.js"></script>
+	<script src="app/components/movie/movie.service.js"></script>
+	<script src="app/components/movie/movie-list.controller.js"></script>
+	<script src="app/components/movie/movie.controller.js"></script>
+	<script src="app/components/movie/genre.service.js"></script>
+	<script src="app/components/movie/rating.directive.js"></script>
+</body>
+</html>

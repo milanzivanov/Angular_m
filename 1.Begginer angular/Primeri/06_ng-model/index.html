@@ -1,0 +1,17 @@
+<html ng-app="myFirstModule">
+  <head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="HelloWorldController.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="HelloWorldController">
+      <h1> {{message}}</h1> 
+
+      <!-- Kako korisnik unosi tekst, automatski se menja $scope.message, a ovo se automatski odražava na  {{message}} -->
+      <input type="text" ng-model="message"> 
+    </div>
+
+  </body>
+</html>

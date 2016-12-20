@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spy example</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="EmployeeController as ec">
+	<h2 class="col-xs-offset-2">Spy example</h2>
+	<form novalidate class="form-horizontal">
+		<div class="form-group">
+			<label class="col-xs-2 control-label" for="jmbg">Jmbg</label>
+    		<div class="col-xs-2"><input class="form-control" type="text" id="jmbg" ng-model="ec.employee.jmbg" /></div>
+		</div>
+		<div class="form-group">
+    		<label class="col-xs-2 control-label" for="name">Name</label>
+    		<div class="col-xs-2"><input class="form-control" type="text" id="name" ng-model="ec.employee.name" /></div>
+    	</div>
+		<div class="form-group">
+			<label class="col-xs-2 control-label" for="surname">Surname</label>
+    		<div class="col-xs-2"><input class="form-control" type="text" id="surname" ng-model="ec.employee.surname" /></div>
+		</div>
+		<div class="form-group">
+    		<div class="col-xs-offset-2 col-xs-6">
+				<input class="btn btn-primary" type="submit" ng-click="ec.saveEmployee()" value="Save" />
+				<input class="btn btn-info" type="button" ng-click="ec.reset()" value="Reset" />
+			</div>
+    	</div>
+	</form>
+	<table ng-show="ec.employees.length !== 0" class="table table-condensed table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Jmbg</th>
+				<th>Name</th>
+				<th>Surname</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="emp in ec.employees">
+				<td>{{emp.jmbg}}</td>
+				<td>{{emp.name}}</td>
+				<td>{{emp.surname}}</td>
+				<td><button class="btn btn-danger" ng-click="ec.deleteEmployee(emp.jmbg)">Remove</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script src="./assets/js/angular.js"></script>
+<script src="./app/components/employee/employee.module.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/components/employee/employee.service.js"></script>
+<script src="./app/components/employee/employee.controller.js"></script>
+</body>
+</html>

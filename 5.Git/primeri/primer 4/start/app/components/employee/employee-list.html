@@ -1,0 +1,23 @@
+<div ng-controller="EmployeeListController as ec">
+<table id="employeeTable" class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Jmbg</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Date of birth</th>
+            <th>Place of birth</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in ec.employees track by employee.jmbg">
+            <td>{{employee.jmbg}}</td>
+            <td>{{employee.name}}</td>
+            <td>{{employee.surname}}</td>
+            <td>{{employee.dateOfBirth | date:'dd/MM/yyyy'}}</td>
+            <td>{{employee.placeOfBirth.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<button class="btn btn-primary" ng-click="ec.goToAdd()">Add employee</button>
+</div>

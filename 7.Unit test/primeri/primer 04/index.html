@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple mock example</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="AppController as ac">
+	<h2 class="col-xs-offset-2">Simple mock example</h2>
+	<form novalidate class="form-horizontal">
+		<div class="col-xs-2"><input class="form-control" type="number" id="x" ng-model="ac.x" /></div>
+		<div class="col-xs-2"><input class="form-control" type="number" id="y" ng-model="ac.y" /></div>
+		<input class="btn" type="submit" ng-click="ac.sum()" value="+" />
+		<input class="btn" type="submit" ng-click="ac.multiply()" value="*" />
+	</form>
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/controllers/app.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic locale example</title>
+</head>
+<body ng-app="app">
+<div ng-controller="AppController as ac">
+    <H1>Dynamic locale example</H1>
+    <button ng-click="ac.changeLocale('en')">English</button>
+    <button ng-click="ac.changeLocale('sr-latn')">Serbian</button>
+    <button ng-click="ac.changeLocale('de-de')">German</button><br/>
+    <input type="number" name="count" ng-model="ac.count" placeholder="count">
+    <h3>Count: {{ac.count|number}}</h3>
+    <input type="number" name="amount" ng-model="ac.amount" placeholder="currency">
+    <h3>Currency: {{ac.amount|currency}}</h3>
+    <input type="number" name="dat" ng-model="ac.dat" placeholder="date">
+    <h3>Date: {{ac.dat | date:'fullDate'}}</h3>
+</div>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.js"></script>
+<script src="./app.module.js"></script>
+<script src="./app.config.js"></script>
+<script src="./app.controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ControllerAs vs $scope</title>
+</head>
+<body ng-app="app">
+	<h1>ControllerAs vs $scope</h1>
+	<h2>$scope</h2>
+	<div ng-controller="AppGreatGrandParentController">
+		<p>In GreatGrandParent controller - wine: {{wine.name}}</p>
+		<div ng-controller="AppGrandParentController">
+			<p>In GrandParent controller - wine: {{wine.name}}</p>
+			<div ng-controller="AppParentController">
+				<p>In Parent controller - wine: {{wine.name}}</p>
+				<div ng-controller="AppController">
+					<p>
+						In App controller - wine: {{wine.name}}<br/>
+						GreatGrandParent wine: {{$parent.$parent.$parent.wine.name}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h2>ControllerAs</h2>
+	<div ng-controller="App2GreatGrandParentController as ggp">
+		<p>In GreatGrandParent controller - wine: {{ggp.wine.name}}</p>
+		<div ng-controller="App2GrandParentController as gp">
+			<p>In GrandParent controller - wine: {{gp.wine.name}}</p>
+			<div ng-controller="App2ParentController as p">
+				<p>In Parent controller - wine: {{p.wine.name}}</p>
+				<div ng-controller="App2Controller as a">
+					<p>
+						In App controller - wine: {{a.wine.name}}<br/>
+						GreatGrandParent wine: {{ggp.wine.name}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="./assets/js/angular.js"></script>
+	<script src="./app/app.module.js"></script>
+	<script src="./app/controllers/app.controller.js"></script>
+</body>
+</html>

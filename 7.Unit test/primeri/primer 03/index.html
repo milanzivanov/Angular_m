@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing a filter example</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container">
+	<h2 class="col-xs-offset-2">Testing a filter example</h2>
+    <br/>
+    <h3>Unesi vreme u sekundama</h3>
+    <input type="text" ng-model="time">
+    <br/>
+    <p>Vreme formatirano sa filterom: {{time | secondsToTime}}</p>
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/filters/secondsToTime.filter.js"></script>
+</body>
+</html>

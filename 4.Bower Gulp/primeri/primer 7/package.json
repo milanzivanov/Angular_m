@@ -1,0 +1,7 @@
+{
+  "author": "Pera Perić",
+  "name": "myProject",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}

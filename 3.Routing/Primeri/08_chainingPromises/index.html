@@ -1,0 +1,20 @@
+<html ng-app="myFirstModule">
+  <head>
+  	<meta charset="utf-8">
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="calcService.js"></script>
+    <script src="MyController.js"></script>
+  </head>
+  <body ng-controller="MyController">
+    <h1>Ulančavanje promise objekata</h1>
+    <p>Prvi broj se uvećava za 1, a drugi množi sa 2. Svaka od ovih operacija traje po 2 sekunde. Nakon što imamo oba rezultata, sabiramo ih.</p>
+    <div><p>1 + 1 = <input type="text" value="{{retVal1}}"> </p></div>
+    <div><p>1 * 2 = <input type="text" value="{{retVal2}}"> </p></div>
+    <div><p><input type="text" value="{{retVal1}}"> + <input type="text" value="{{retVal2}}"> = <input type="text" value="{{finalRes}}"> </p></div>
+  
+    <div><p><button type="button" ng-click="trigger()">Trigger</button></p></div>
+    <div><p><button type="button" ng-click="triggerAll()">Trigger parallel</button></p></div>
+    <div><p><button type="button" ng-click="restart()">Restart</button></p></div>
+  </body>
+</html>

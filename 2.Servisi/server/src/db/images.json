@@ -1,0 +1,130 @@
+[
+    {
+        "id":			"i1",
+        "title":		"Gorillaz",
+        "album":		"2014",
+        "description":	"Gorillaz band wallpaper",
+        "path_hires":	"slike/gallery/1.jpg",
+        "path_lores":	"slike/thumbs/1.jpg"
+    },
+    {
+        "id":			"i2",
+        "title":		"Field",
+        "album":		"2013",
+        "description":	"Lizzard in the field wallpaper",
+        "path_hires":	"slike/gallery/2.jpg",
+        "path_lores":	"slike/thumbs/2.jpg"
+    },
+    {
+        "id":			"i3",
+        "title":		"Raindrops",
+        "album":		"2014",
+        "description":	"Raindrops wallpaper",
+        "path_hires":	"slike/gallery/3.jpg",
+        "path_lores":	"slike/thumbs/3.jpg"
+    },
+    {
+        "id":			"i4",
+        "title":		"Dark forest",
+        "album":		"2013",
+        "description":	"Dark forest wallpaper",
+        "path_hires":	"slike/gallery/4.jpg",
+        "path_lores":	"slike/thumbs/4.jpg"
+    },
+    {
+        "id":			"i5",
+        "title":		"Grafitti wall",
+        "album":		"2013",
+        "description":	"Grafitti wallpaper",
+        "path_hires":	"slike/gallery/5.jpg",
+        "path_lores":	"slike/thumbs/5.jpg"
+    },
+    {
+        "id":			"i6",
+        "title":		"Raindrops",
+        "album":		"2013",
+        "description":	"Raindrops wallpaper",
+        "path_hires":	"slike/gallery/6.jpg",
+        "path_lores":	"slike/thumbs/6.jpg"
+    },
+    {
+        "id":			"i7",
+        "title":		"Abstract landscape",
+        "album":		"2013",
+        "description":	"Abstract snowy landscape wallpaper",
+        "path_hires":	"slike/gallery/7.jpg",
+        "path_lores":	"slike/thumbs/7.jpg"
+    },
+    {
+        "id":			"i8",
+        "title":		"Trough the mist",
+        "album":		"2014",
+        "description":	"Abstract landscape wallpaper",
+        "path_hires":	"slike/gallery/8.jpg",
+        "path_lores":	"slike/thumbs/8.jpg"
+    },
+    {
+        "id":			"i9",
+        "title":		"Hummingbird",
+        "album":		"2014",
+        "description":	"Hummingbird abstract wallpaper",
+        "path_hires":	"slike/gallery/9.jpg",
+        "path_lores":	"slike/thumbs/9.jpg"
+    },
+    {
+        "id":			"i10",
+        "title":		"Grafitti",
+        "album":		"2013",
+        "description":	"Grafitti wallpaper",
+        "path_hires":	"slike/gallery/10.jpg",
+        "path_lores":	"slike/thumbs/10.jpg"
+    },
+    {
+        "id":			"i11",
+        "title":		"Focus shift",
+        "album":		"2013",
+        "description":	"Focus shift landscape wallpaper",
+        "path_hires":	"slike/gallery/11.jpg",
+        "path_lores":	"slike/thumbs/11.jpg"
+    },
+    {
+        "id":			"i12",
+        "title":		"Traffic in rain",
+        "album":		"2014",
+        "description":	"Traffic in rain wallpaper",
+        "path_hires":	"slike/gallery/12.jpg",
+        "path_lores":	"slike/thumbs/12.jpg"
+    },
+    {
+        "id":			"i13",
+        "title":		"Blur",
+        "album":		"2013",
+        "description":	"Blury window wallpaper",
+        "path_hires":	"slike/gallery/13.jpg",
+        "path_lores":	"slike/thumbs/13.jpg"
+    },
+    {
+        "id":			"i14",
+        "title":		"Blury city",
+        "album":		"2013",
+        "description":	"Blury city wallpaper",
+        "path_hires":	"slike/gallery/14.jpg",
+        "path_lores":	"slike/thumbs/14.jpg"
+    },
+    {
+        "id":			"i15",
+        "title":		"Lone house",
+        "album":		"2014",
+        "description":	"Lone house wallpaper",
+        "path_hires":	"slike/gallery/15.jpg",
+        "path_lores":	"slike/thumbs/15.jpg"
+    },
+    {
+        "id":			"i16",
+        "title":		"Eau rouge",
+        "album":		"2014",
+        "description":	"Ayrton Senna comming to Eau rouge",
+        "path_hires":	"slike/gallery/16.jpg",
+        "path_lores":	"slike/thumbs/16.jpg"
+    }
+]

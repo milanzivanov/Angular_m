@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Company Registry</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+	<link href="./assets/css/font-awesome.css" rel="stylesheet">
+	<link href="./assets/css/company.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+	<div class="container-fluid">
+		<div class="row" ng-include="'app/layout/header.html'"></div>
+		<div class="row">
+			<div class="col-sm-2" ng-include="'app/layout/sideBar.html'"></div>
+			<div class="col-sm-10" ui-view></div>
+		</div>
+	</div>
+	<script src="./assets/js/angular.js"></script>
+	<script src="./assets/js/angular-ui-router.js"></script>
+	<script src="./app/app.js"></script>
+	<script src="./app/layout/sideBar.controller.js"></script>
+	<script src="./app/components/company/company.controller.js"></script>
+	<script src="./app/components/company/company-list.controller.js"></script>
+	<script src="./app/components/company/company.service.js"></script>
+
+	<script src="./app/components/employee/employee.controller.js"></script>
+	<script src="./app/components/employee/employee-list.controller.js"></script>
+	<script src="./app/components/employee/employee.service.js"></script>
+</body>
+</html>

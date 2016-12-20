@@ -1,0 +1,6 @@
+{
+  "name": "guessTheNumber",
+  "dependencies": {
+    "angular": "latest"
+  }
+}

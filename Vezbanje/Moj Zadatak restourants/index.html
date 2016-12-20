@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="restModule">
+<head>
+    <meta charset="utf-8">
+    <meta type="viewport" content="width:display-width, initial-scale=1">
+    <title>My Restourants</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" ui-view="navbar"></div>
+        <div class="row" ui-view="content"></div>
+
+    </div>
+
+    <script src="./assets/js/angular.js"></script>
+    <script src="./assets/js/angular-ui-router.js"></script>
+    <script src="./assets/js/jquery-1.11.0.js"></script>
+    <script src="./assets/js/bootstrap.js"></script>
+
+    <script src="./app/app.module.js"></script>
+    <script src="./app/components/core/core.module.js"></script>
+    <script src="./app/components/restaurant/rest.module.js"></script>
+    <script src="./app/components/core/core.router.js"></script>
+    <script src="./app/components/core/home.controller.js"></script>
+    <script src="./app/components/restaurant/rest.router.js"></script>
+    <script src="./app/components/restaurant/add-rest.controller.js"></script>
+    <script src="./app/components/restaurant/rest-list.controller.js"></script>
+    <script src="./app/components/restaurant/rest-service.js"></script>
+
+    <script src="./assets/js/angular-locale_en-gb.js"></script> <!--imamo jos srpski i nemacki-->
+
+
+</body>
+</html>
+

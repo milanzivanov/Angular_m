@@ -1,0 +1,77 @@
+<div ng-controller="EmployeeListController as elc">
+    <h3>Employee list</h3>
+	<table class="table table-hover table-bordered">
+		<thead>
+		<tr class="active">
+			<td><input class="form-control" id="jmbg" name="jmbg" placeholder="Jmbg" ng-model="elc.filter.jmbg"></td>
+			<td><input class="form-control" id="name" name="name" placeholder="Name" ng-model="elc.filter.name"></td>
+			<td><input class="form-control" id="surname" name="surname" placeholder="Surname" ng-model="elc.filter.surname"></td>
+			<td><input class="form-control" id="email" name="email" placeholder="E-mail" ng-model="elc.filter.email"></td>
+		</tr>
+        <tr>
+            <td colspan="4"><button class="btn btn-default" ng-click="elc.search()">Pretraga</button></td>
+        </tr>
+		<tr class="active">
+			<th>
+				<a class="link" ng-href ng-click="elc.tableChanged('jmbg')">
+                    Jmbg
+                    <i class="fa fa-sort disabled" ng-hide="elc.sort == 'jmbg'"></i>
+                    <i class="fa fa-sort-desc" ng-show="elc.ort == 'jmbg' && elc.sortDirection == 'asc'"></i>
+                    <i class="fa fa-sort-asc" ng-show="elc.sort == 'jmbg' && elc.sortDirection == 'desc'"></i>
+                </a>
+			</th>
+			<th>
+				<a class="link" ng-href ng-click="elc.tableChanged('name')">
+                    Name
+                    <i class="fa fa-sort disabled" ng-hide="elc.sort == 'name'"></i>
+                    <i class="fa fa-sort-desc" ng-show="elc.sort == 'name' && elc.sortDirection == 'asc'"></i>
+                    <i class="fa fa-sort-asc" ng-show="elc.sort == 'name' && elc.sortDirection == 'desc'"></i>
+                </a>
+			</th>
+			<th>
+				<a class="link" ng-href ng-click="elc.tableChanged('surname')">
+                    Surname
+                    <i class="fa fa-sort disabled" ng-hide="elc.sort == 'surname'"></i>
+                    <i class="fa fa-sort-desc" ng-show="elc.sort == 'surname' && elc.sortDirection == 'asc'"></i>
+                    <i class="fa fa-sort-asc" ng-show="elc.sort == 'surname' && elc.sortDirection == 'desc'"></i>
+                </a>
+			</th>
+			<th>
+				<a class="link" ng-href ng-click="elc.tableChanged('email')">
+                    E-mail
+                    <i class="fa fa-sort disabled" ng-hide="elc.sort == 'email'"></i>
+                    <i class="fa fa-sort-desc" ng-show="elc.sort == 'email' && elc.sortDirection == 'asc'"></i>
+                    <i class="fa fa-sort-asc" ng-show="elc.sort == 'email' && elc.sortDirection == 'desc'"></i>
+                </a>
+			</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-click="elc.edit(employee._id)" class="link" ng-repeat="employee in elc.employees">
+			<td>{{employee.jmbg}}</td>
+			<td>{{employee.name}}</td>
+			<td>{{employee.surname}}</td>
+			<td>{{employee.email}}</td>
+		</tr>
+		</tbody>
+	</table>
+	<ul class="pagination">
+        <li ng-class="{'disabled': elc.pagination.page == 1}">
+            <a class="link" ng-href aria-label="Previous" ng-click="pagination.changePage(pagination.page - 1)">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li ng-repeat="page in elc.pagination.iterator track by $index" ng-class="{'active':($index+1) == elc.pagination.page}">
+            <a class="link" ng-href ng-click="elc.pagination.changePage($index+1)">{{$index+1}}</a>
+        </li>
+        <li ng-class="{'disabled': elc.pagination.page == elc.pagination.iterator.length}">
+            <a class="link" ng-href aria-label="Next" ng-click="elc.pagination.changePage(elc.pagination.page + 1)">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+    <hr>
+    <div>
+        <a class="btn btn-primary" href="#/employee/add">Add new employee</a>
+    </div>
+</div>

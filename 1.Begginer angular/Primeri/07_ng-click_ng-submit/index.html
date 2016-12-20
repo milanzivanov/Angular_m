@@ -1,0 +1,36 @@
+<html ng-app="myFirstModule">
+  <head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="HelloWorldController.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="HelloWorldController">
+
+      <h1>ng-click test</h1>
+      <form>
+        <!-- vrednost $scope.usernameClick preuzima se sa input polja -->
+        username: <input type="text" ng-model="usernameClick">
+        <!-- poziva se funkcija myFunctionClick() -->
+        <input type="button" value="Click me" ng-click="myFunctionClick()">
+      </form>
+
+      <hr>
+
+      <h1>ng-submit test</h1>
+      <!-- Na submit() dogadjaj u browseru pozvaće se funkcija myFunctionSubmit i proslediće se vrednost
+      $scope.usernameSubmit (vrednost uneta u input polje). Napomena: ovo je samo primer da se funkciji mogu proslediti parametri. U ovom slučaju parametar nismo morali prosleđivati jer bi smo vrednost svakako imali dostupnu u $scope.usernameSubmit (kao u ng-click primeru)
+       -->
+      <form ng-submit="myFunctionSubmit(usernameSubmit)">
+        <!-- required="" obezbeđuje da polje mora imati unetu vrednost prilikom submit() događaja -->
+        <!-- vrednost $scope.usernameSubmit preuzima se sa input polja -->
+        username: <input required="" type="text" ng-model="usernameSubmit">
+        <input type="submit">
+      </form>
+
+
+    </div>
+
+  </body>
+</html>

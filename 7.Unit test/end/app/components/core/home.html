@@ -1,0 +1,97 @@
+<div>
+	<h2>Assignment</h2>
+	<p>
+		Make sure you read the <a href="#/about">About</a> page before starting your assignment.<br/>
+		Your assignment will be to take what we've learned today and apply it to your project.<br/>
+		<b>Important:</b> if you have completed all the non-bonus excercises from the last class then it is highly recommended that you take your project and work with it instead of this one. For your convenience copy the assignment from below into your home.html file. If you haven't finished all of the non-bonus excercises use this project instead.<br/>
+		<em>Note:</em> use bower to install all the needed libraries.
+	</p>
+	<div class="assignment">
+		Complete the following exercises:
+		<ol>
+			<li>
+				Create and run the following unit tests for your application (<em>Note:</em> there is no need to check if angular components work as expected. Make sure to place the .spec files in the appropriate place. Don't forget to install angular-mocks (bower) and make sure to setup karma and jasmine 2.0 (npm) as we've seen in the examples):
+				<ol>
+					<li>
+						Create an employee list array with the following data:<br/>
+						<code>
+							[
+								{"_id":"1", "jmbg":"1", "name":"Boban", "surname":"Mikić", "placeOfBirth":"Novi Sad"},<br/>
+								{"_id":"2", "jmbg":"2", "name":"Renata", "surname":"Ninić", "placeOfBirth":"Beograd"},<br/>
+								{"_id":"3", "jmbg":"3", "name":"Kristijan", "surname":"Terzić", "placeOfBirth":"Subotica"},<br/>
+								{"_id":"4", "jmbg":"4", "name":"Svetlana", "surname":"Terzić", "placeOfBirth":"Novi Sad"},<br/>
+								{"_id":"5", "jmbg":"5", "name":"Tamara", "surname":"Simić", "placeOfBirth":"Subotica"},<br/>
+								{"_id":"6", "jmbg":"6", "name":"Boris", "surname":"Dimić", "placeOfBirth":"Novi Sad"},<br/>
+								{"_id":"7", "jmbg":"7", "name":"Aleksandar", "surname":"Bratić", "placeOfBirth":"Beograd"}
+							]
+						</code><br/>
+						Create the EmployeeListController by passing the $controller service this array, along with an empty array for places, and a new $scope like we've seen in the examples. With the controller set, we can test whether the number of pages in the pagination object is equal to 2;
+					</li>
+					<li>
+						Write a test to check whether every attribute in the EmployeeListController is defined (elc.employees, elc.places, elc.pagination (currentPage, pageSize, etc.));
+					</li>
+					<li>
+						Create the EmployeeController by mocking the placeModal so that it has one method, open, which returns a promise that resolves to an object with the following data: <code>{"postalCode":"34000", "name":"Kragujevac"}</code>. The deleteModal should have the open method which returns a promise that resolves to true. The employee object should be mocked with the following code<br/>
+						<code>
+							var employee = new Employee();<br/>
+							employee._id = "1";<br/>
+							employee.jmbg = "1";<br/>
+							employee.name = "Boban";<br/>
+							employee.surname = "Mikić";<br/>
+							employee.placeOfBirth = "Novi Sad";
+						</code><br/>
+						The places array should contain the following data:<br/>
+						<code>
+							[
+								{"postalCode":"21000", "name":"Novi Sad"},<br/>
+								{"postalCode":"11000", "name":"Beograd"},<br/>
+								{"postalCode":"24000", "name":"Subotica"}
+							]
+						</code><br/>
+						Write tests to check whether the appropriate requests are made when the "save" and "remove" methods are invoked. Create a test that checks if there are more entires in the places array after the newPlace function is invoked (<em>Note:</em> while placeModal and deleteModal are services, since their open function returns a promise we need the $q service, which means we can define these functions only in the inject function (where $q is injected), and not in the module function using the $provide service. Also remember that whenever a promise needs to be resolved we need to activate the digest cycle);
+					</li>
+					<li>
+						Write a test to check whether every attribute in the EmployeeController is defined (ecc.employee, ec.places, etc.);
+					</li>
+				</ol>
+			</li>
+			<li>
+				Setup your environment for e2e testing by using the appe2e.module.js and use the places and employees arrays, as well as the single employee defined above to setup mock backends. Write e2e tests that test the following functionality (<em>Note:</em> use the page object pattern and don't forget to include the angular-mocks script in your index.html):
+				<ol>
+					<li>
+						Write tests to see if pagination works correctly by examining the number of available pages (2 are expected), the number of employees displayed on the first page (5) and the number of employees displayed on the second page (2);
+					</li>
+					<li>
+						Write tests to see if sorting works correctly by sorting the employees (in both ascending and descending order) by name and place of birth and seeing if the first and last element match the expected employees (<em>Note:</em> you will need to use pagination buttons to access the last element);
+					</li>
+					<li>
+						Write tests to see if search works correctly by searching for employees name and place of birth and seeing if the first and last element match the expected employees (<em>Note:</em> for name choose something that will give a few results, <i>i.e.</i> "bo". For placeOfBirth go through all three places. If no sorting is specified the employees will be listed in the order as shown in the code above);
+					</li>
+					<li>
+						<b>Bonus:</b> take the above test for search by place of birth and instead of making three checks for each place, write a test that acts like a for loop where you will set the select element to each of the options (except the "---" value) and test whether the first and last employee in the table has the selected place of birth (<em>Note:</em> since clear doesn't work for the select tag you can't simply use sendKeys as sending multiple keys adds them together. Instead locate the option tag and click it);
+					</li>
+					<li>
+						<b>Bonus:</b> write tests that check whether the number of pages is set to 1 when the search parameters are set to a non-null value and returns to being 2 when the search parameters are blank again;
+					</li>
+					<li>
+						Click on the first row and check if the form has loaded the correct values in its input elements;
+					</li>
+					<li>
+						Write tests to check if the Revert button is disabled, after which you should change the value of one input element (not jmbg) and check whether Revert is enabled. After clicking Revert or changing the value of the input element back to the original value the Revert button should be disabled again;
+					</li>
+					<li>
+						Write tests that check the form state. Test if the form is valid when it contains a jmbg that does not have 13 characters, an empty name and an email that doesn't match the pattern;
+					</li>
+					<li>
+						<b>Bonus:</b> Test whether all the appropriate error messages are displayed;
+					</li>
+				</ol>
+			</li>
+		</ol>
+		<ul>
+			<li>Focus on doing non-bonus excercises during class;</b>
+			<li>What you don't complete during the class remains as a homework assignment;</li>
+			<li>It is highly recommended that you complete each of the listed excercises, including bonus excercises;</li>
+		</ul>
+	</div>
+</div>

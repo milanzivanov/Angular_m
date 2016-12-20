@@ -1,0 +1,98 @@
+<div>
+	<h2>Assignment</h2>
+	<p>
+		Make sure you read the <a href="#/about">About</a> page before starting your assignment.<br/>
+		Your assignment will be to take what we've learned today and apply it to your project.<br/>
+		<div class="solution">Text in this color will signify the location and/or explanation of the <em>solution</em> wherever necessary.</div>
+	</p>
+	<div class="assignment">
+		Complete the following exercises:
+		<ol>
+			<li>
+				Go through all the javascript files and make sure they adhere to the best practices of writing angular components:
+				<ol>
+					<li>
+						Separate the code in different files so as to adhere to the "One component per file" rule (<em>Note:</em> be mindful of the naming convention used for file names);
+						<div class="solution">We make sure that each controller is in a separate file, as well as to separate module creation, module configuration and route configuration into separate files;</div>
+					</li>
+					<li>
+						Use self-invoking functions wherever necessary;
+						<div class="solution">The code in each .js file is wrapped in a self-invoking function, and 'use strict'; is added as well;</div>
+					</li>
+					<li>
+						Use controller as sintax instead of the $scope object;
+						<div class="solution">We've omitted the $scope object almost entirely from the project. Be sure to note the <i>entity</i>.route.js files where we use the ui-router to set controllers using the controller as syntax;</div>
+					</li>
+					<li>
+						Inject your dependencies using the inline array or via the $inject property annotation;
+						<div class="solution">This is a necessary step if we wish to minify our code;</div>
+					</li>
+					<li>
+						<b>Bonus:</b> create a nested view structure described in the previous lesson using the ui-router;
+						<div class="solution">Take a look at the index.html and core.module.js files to see nested state creation;</div>
+					</li>
+					<li><b>Bonus:</b> modify the add/edit form of both companies and employees so that the company/employee is retrieved/created during routing instead of inside the controller (<em>Note:</em> use the resolve property of the state object);
+						<div class="solution">Make sure to think about the order of states you define, as <i>employee/:id</i> accepts <i>employee/add</i>, and add will be the value of id. Therefore, we need to define <i>employee/add</i> state before the <i>employee/:id</i> one;</div>
+					</li>
+					<li>
+						<b>Bonus:</b> handle the case when an employee/company is requested but the database doesn't have the employee/company with the given id, <i>e.g.</i> display an alert and/or redirect to the home page;
+						<div class="solution">For this we need to take a look at the employee.config.js and company.config.js files. We register an event listener that will trigger when a faulty route is detected;</div>
+					</li>
+				</ol>
+			</li>
+			<li>
+				Create a directory structure that adheres to the LIFT principle as well as the "Segment by application component" practice (<em>Note:</em> if you haven't done this in the previous step, make sure to adhere to the "One module per component" principle);
+				<div class="solution">We need to take special care when thinking about non-component specific code and where to place it. Code which isn't related to a specific code usually fits into either the shared/common folder or the core/layout module. For this application, we've grouped the home and about page along with all the core functionality and states into the core module;</div>
+			</li>
+			<li>
+				Replace the $http service with the $resource service;
+				<div class="solution">Open company.js from the services folder in zadatak-start and compare it to company.service.js in the zadatak-end/app/components/company folder. See how the new service is used in the controller;
+			</li>
+			<li>
+				Replace all external javascript dependencies and libraries with bower dependencies:
+				<ol>
+					<li>Form a bower.json file which has all the basic fields field out (<em>Note:</em> use the "bower init" command);</li>
+					<li>Fill in all the external dependencies;</li>
+					<li>Create a .bowerrc file to change the name of the directory where to download the dependencies, <i>e.g. assets/js</i>;</li>
+				</ol>
+				<div class="solution">Make sure you're aware where your dependencies are placed (using .bowerrc), what your dependencies are and what version are you aiming to use;</div>
+			</li>
+			<li>
+				Use the gulpfile.js file from the last example of this lesson and modify it so that it works for your application (<em>Note:</em> make sure to modify the index.html file);
+				<div class="solution">Take special care with your gulpfile.js. While it is a powerful tool if it's not setup correctly it can cause phantom bugs. Avoid using minifcation and aggregation during development, as it's impossible to debug minified code;</div>
+			</li>
+			<li>
+				<b>Bonus:</b> create SASS files to edit the style of the application and expand the gulpfile.js file with plugins that compile SASS and minify CSS and incorporate them in your build process;
+				<div class="solution">The SASS file is defined in the assets/sass folder and we've added three new gulp plugins, one to compile sass, one to concatenate all the css files and one to minify all the css files;</css>
+			</li>
+			<li>
+				<b>Bonus:</b> read about JSHint and expand your gulpfile.js file with the appropriate plugin which you will incorporate in your build process;
+				<div class="solution">JSHint is a useful tool to help developers write cleaner javascript code. See the gulpfile.js file to see how we've utilized the plugin;</div>
+			</li>
+			<li>
+				Expand the application by adding a new component which acts as a place registry:
+				<ol>
+					<li>A place has two attributes, a name and a postal code, <i>e.g.</i> {name:'Novi Sad', code:'21000'} (<em>Note:</em> make sure to set the _id field of the entity to either name or code before persisting it);</li>
+					<li>A form to view all the registered places, which includes sort, search and pagination functionality;</li>
+					<li>A form to add/edit a place;</li>
+					<li>Update the side bar to include a link to the place registry;</li>
+					<li>Expand the company add/edit form so that there is a field named "headquarters" where the component for that field is a combobox which contains all the places (<em>Note:</em> combine ng-repeat with the option tag nested in the select tag to create a combobox);</li>
+					<li><b>Bonus:</b> repeat the above process for the employee by adding a "placeOfBirth" field;</li>
+					<li>
+						<b>Bonus:</b> expand the employee list view so that it displays the "placeOfBirth" field and searching by place (<em>Note:</em> use a combobox to search, so that you can either have employees from one place displayed or from all of them);
+						<div class="solution">There are several methods to implement this functionality. We've chosen the simplest route where we save the name of the place inside the employee object. Another solution could be to save the id of the place object, or even the whole place object;</div>
+					</li>
+				</ol>
+			</li>
+			<li>
+				<b>Bonus:</b> add a "Revert" button on the add/edit form of the company, employee and place entity. What this button does is negate the changes you've made to the current company/employee/place, restoring the selected entity to it's initial state while remaining on the page (<em>Note:</em> read about angular.copy and use it to form a clone object when the form opens);
+				<div class="solution"><em>Code:</em> app/components/employee/employee.controller.js - line 14, 18-20;</div>
+			</li>
+		</ol>
+		<ul>
+			<li>Focus on doing non-bonus excercises during class;</b>
+			<li>What you don't complete during the class remains as a homework assignment;</li>
+			<li>It is highly recommended that you complete each of the listed excercises, including bonus excercises;</li>
+		</ul>
+	</div>
+</div>

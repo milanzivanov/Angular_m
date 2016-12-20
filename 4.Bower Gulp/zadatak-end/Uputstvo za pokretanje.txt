@@ -1,0 +1,8 @@
+﻿Uveriti se da su bower i gulp instaliran globalno, a ako nisu instalirati sa:
+	npm install bower -g
+	npm install gulp -g
+
+Otvoriti terminal u tekućem folderu i izvršiti komande:
+	npm install
+	bower install
+	gulp

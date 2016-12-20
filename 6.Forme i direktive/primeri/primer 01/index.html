@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple form example</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="FormController as form">
+	<h2 class="col-xs-offset-2">Simple form example</h2>
+	<!-- postavljamo novalidate kako se ne bi radila HTML 5 validacija -->
+	<form novalidate class="form-horizontal">
+		<div class="form-group">
+			<label class="control-label col-xs-2" for="inputName">Name</label>
+    		<div class="col-xs-6"><input class="form-control" type="text" id="inputName" ng-model="form.user.name" /></div>
+    	</div>
+    	<div class="form-group">
+			<label class="control-label col-xs-2" for="inputEmail">E-mail</label>
+			<!-- time što stavljamo type="email" uključujemo angular validaciju za email šablon tekst@tekst -->
+    		<div class="col-xs-6"><input class="form-control col-xs-10" type="email" id="inputEmail" ng-model="form.user.email" /></div>
+    	</div>
+    	<div class="form-group">
+			<label class="control-label col-xs-2" for="inputGender">Gender</label>
+			<div class="col-xs-6">
+				<label class="radio-inline"><input type="radio" ng-model="form.user.gender" value="male" >male</label>
+				<label class="radio-inline"><input type="radio" ng-model="form.user.gender" value="female" >female</label>
+			</div>
+    	</div>
+    	<div class="form-group">
+    		<div class="col-xs-offset-2 col-xs-6">
+				<input class="btn btn-primary" type="submit" ng-click="form.update(form.user)" value="Save" />
+				<input class="btn btn-danger" type="button" ng-click="form.reset()" value="Reset" />
+			</div>
+    	</div>
+	</form>
+	<br />
+	<div class="col-xs-offset-2 col-xs-6">
+		<!-- model će se ažurirati samo ako polje sadrži ispravnu vrednost -->
+		<pre>user = {{form.user | json}}</pre>
+  		<pre>master = {{form.master | json}}</pre>
+	</div>
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/controllers/form.controller.js"></script>
+</body>
+</html>

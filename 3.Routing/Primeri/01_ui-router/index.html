@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="uiRouterExample" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>uiRouter example</title>
+
+  <script src="angular.js"></script>
+  <script src="angular-ui-router.js"></script>
+  <script src="app.js"></script>
+
+</head>
+<body>
+  <h1>uiRouter example</h1>
+  <p>Some static content</p>
+  <!-- ui-sref ukazuje na stanje aplikacije -->
+  <a href="#/state1">First page</a>
+  <a ui-sref="secondState">Second page</a>
+  
+  <!-- U ovaj div ce se umetati templejti u stranicu -->
+  <div ui-view></div>  
+
+</body>
+</html>

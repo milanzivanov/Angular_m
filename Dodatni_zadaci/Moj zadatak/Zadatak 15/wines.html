@@ -1,0 +1,23 @@
+<table>
+        <thead>
+            <tr>
+                <th>Ime Vina</th>
+                <th>Godina Proizvodnje</th>
+                <th>Tip grozda</th>
+                <th>Zemlja Porekla</th>
+                <th>Region</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="i in wines | orderBy:'name'">
+                <td>{{i.name}}</td>
+                <td>{{i.year}}</td>
+                <td>{{i.grapes}}</td>
+                <td>{{i.country}}</td>
+                <td>{{i.region}}</td>
+                <td><a href="#/main/wines/{{i._id}}">UPDATE</a></td>
+            </tr>
+        </tbody>
+</table>

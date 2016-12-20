@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ngLocale example</title>
+</head>
+<body>
+<div ng-app="app">
+     <H1>ngLocale example</H1>
+     <input type="number" name="count" ng-model="count" placeholder="count">
+     <h3>Count: {{count|number}}</h3>
+     <input type="number" name="amount" ng-model="amount" placeholder="currency">
+     <h3>Currency: {{amount|currency}}</h3>
+     <input type="number" name="dat" ng-model="dat" placeholder="date">
+     <h3>Date: {{dat | date:'fullDate'}}</h3>
+</div>
+<script src="./angular.js"></script>
+<script src="./angular-locale_sr-latn.js"></script>
+<!-- <script src="./angular-locale_de-de.js"></script> -->
+<!-- <script src="./angular-locale_en-gb.js"></script> -->
+<script src="./app.module.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ng-model-options with $resource service</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="RadnikController as rad">
+	<h2 class="col-xs-offset-2">ng-model-options with $resource service</h2>
+	<div class="form-group">
+		<label class="control-label col-xs-2" for="pretraga">Prezime</label>
+		<div class="col-xs-6">
+			<input class="form-control" type="text" id="pretraga" name="pretraga" ng-model="rad.pretraga" ng-model-options="{ updateOn: 'default blur', debounce: {'default':1000, 'blur':0 } }"/>
+        </div>
+	</div>
+    <br/>
+    <br/>
+    <table class="table table-condensed table-bordered table-striped">
+        <tbody>
+            <tr ng-repeat="radnik in rad.radnici">
+                <td>{{radnik.jmbg}}</td>
+                <td>{{radnik.name}}</td>
+                <td>{{radnik.surname}}</td>
+                <td>{{radnik.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./assets/js/angular-resource.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/components/radnik/radnik.module.js"></script>
+<script src="./app/components/radnik/radnik-list.controller.js"></script>
+<script src="./app/components/radnik/radnik.service.js"></script>
+</body>
+</html>

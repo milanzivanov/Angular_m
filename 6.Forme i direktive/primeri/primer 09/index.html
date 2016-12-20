@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directives - link function</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="MainAppController as ma">
+	<h2 class="col-xs-offset-2">Directives - link function</h2>
+	Brojač kreće od: <input type="text", ng-model="ma.number"><br/>
+
+	Brojač: <counter interval="500" number="ma.number"></counter>
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/controllers/app.controller.js"></script>
+<script src="./app/directives/linkFunction.directive.js"></script>
+</body>
+</html>

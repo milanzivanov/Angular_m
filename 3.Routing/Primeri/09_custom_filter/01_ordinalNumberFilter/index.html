@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="filterTestModule" lang="en">
+<head>
+  <title>Custom filter</title>
+
+  <script src="angular.js"></script>
+  <script src="app.js"></script>
+  <script src="myController.js"></script>
+  <script src="ordinalNumFilter.js"></script>
+
+</head>
+<body>
+
+  <h1>Custom filter example</h1>
+
+  <div ng-controller="myController">
+    Original array of numbers:
+    <ul ng-repeat="number in array">
+      <li>{{number}}</li>
+    </ul>
+
+    Ordinal filter applied:
+    <ul ng-repeat="number in array">
+      <li>{{number | ordinal}}</li>
+    </ul>
+
+  </div>
+
+
+
+</body>
+</html>

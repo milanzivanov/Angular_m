@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Localization example</title>
+</head>
+<body ng-app="app">
+<div ng-controller="AppController as ac">
+    <H1 translate>{{'MAIN.TITLE'}}</H1>
+    <button ng-click="ac.changeLocale('en')">English</button>
+    <button ng-click="ac.changeLocale('sr-latn')">Serbian</button>
+    <button ng-click="ac.changeLocale('de-de')">German</button><br/>
+    <input type="number" name="count" ng-model="ac.count" placeholder="count">
+    <h3>{{'MAIN.COUNT'|translate}}: {{ac.count|number}}</h3>
+    <input type="number" name="amount" ng-model="ac.amount" placeholder="currency">
+    <h3>{{'MAIN.CURRENCY'|translate}}: {{ac.amount|currency}}</h3>
+    <input type="number" name="dat" ng-model="ac.dat" placeholder="date">
+    <h3>{{'MAIN.DATE'|translate}}: {{ac.dat | date:'fullDate'}}</h3>
+    <br/><br/>
+    <h3>{{'MAIN.SELECTED'|translate}}: {{ac.currentLocal}}</h3>
+</div>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular-translate/angular-translate.js"></script>
+<script src="./bower_components/angular-dynamic-locale/dist/tmhDynamicLocale.js"></script>
+<script src="./app.module.js"></script>
+<script src="./app.config.js"></script>
+<script src="./app.controller.js"></script>
+</body>
+</html>

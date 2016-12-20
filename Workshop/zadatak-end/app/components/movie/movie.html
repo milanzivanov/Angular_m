@@ -1,0 +1,67 @@
+<div>
+	<h3>{{mc.title}}</h3>
+    <hr>
+    <form class="form-horizontal" novalidate name="mc.form">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="name">Name</label>
+            <div class="col-sm-6 col-md-4">
+            	<input type="text" ng-model="mc.movie.name" name="name" id="name" class="form-control" required>
+            </div>
+            <div ng-messages="mc.form.name.$error" ng-show="mc.form.name.$touched">
+                <p ng-message="required">This field is required.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="year">Year</label>
+            <div class="col-sm-6 col-md-4">
+                <input type="text" ng-model="mc.movie.year" name="year" id="year" class="form-control" required ng-minlength="4" ng-maxlength="4">
+            </div>
+            <div ng-messages="mc.form.year.$error" ng-show="mc.form.year.$touched">
+                <p ng-message="required">This field is required.</p>
+                <p ng-message="minlength">This field needs to contain 4 digits.</p>
+                <p ng-message="maxlength">This field needs to contain 4 digits.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="description">Description</label>
+            <div class="col-sm-6 col-md-4">
+                <textarea ng-model="mc.movie.description" name="description" id="description" class="form-control" required ng-minlength="30" ng-maxlength="250"></textarea>
+            </div>
+            <div ng-messages="mc.form.description.$error" ng-show="mc.form.description.$touched">
+                <p ng-message="required">This field is required.</p>
+                <p ng-message="minlength">This field needs to contain at least 30 characters.</p>
+                <p ng-message="maxlength">This field can contain at most 250 characters.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="director">Director</label>
+            <div class="col-sm-6 col-md-4">
+                <input type="text" ng-model="mc.movie.director" id="director" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="duration">Duration</label>
+            <div class="col-sm-6 col-md-4">
+                <input type="text" ng-model="mc.movie.duration" id="duration" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="rating">Rating</label>
+            <div class="col-sm-6 col-md-4">
+                <input type="text" ng-model="mc.movie.rating" id="rating" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="genre">Genre</label>
+            <div class="col-sm-6 col-md-4">
+                <select ng-model="mc.movie.genre" id="genre" class="form-control" ng-options="genre.name as genre.name for genre in mc.genres">
+                </select>
+            </div>
+        </div>
+        <div class="col-sm-offset-2">
+        	<button type="button" class="btn btn-primary" ng-click="mc.save()">Save</button>
+        	<button type="button" class="btn btn-danger" ng-show="mc.movie._id" ng-click="mc.remove()">Delete</button>
+        	<a class="btn btn-default" href="#/movie"><i class="fa fa-chevron-left"></i> Back</a>
+        </div>
+    </form>
+</div>

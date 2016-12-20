@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="winesModule">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moj Angular Zadatak</title>
+    <link rel="stylesheet" href="">
+    <script type="text/javascript"  src="angular/angular.js"></script>
+    <script type="text/javascript" src="modul/app.js"></script>
+    <script type="text/javascript" src="WinesController.js"></script>
+    <script type="text/javascript" src="WinesDataService.js"></script>
+</head>
+<body ng-controller="WinesController">
+    {{555/33}}
+    <div>{{message}}</div>
+    <div>
+        <input type="text" name="text" ng-model="userInput">{{userInput}}<br>
+        <button type="button" ng-click="doClick()">Dugme</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Ime Vina</th>
+                <th>Godina Proizvodnje</th>
+                <th>Tip grozda</th>
+                <th>Zemlja Porekla</th>
+                <th>Region</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="i in wines | orderBy:'name'">
+                <td>{{i.name}}</td>
+                <td>{{i.year}}</td>
+                <td>{{i.grapes}}</td>
+                <td>{{i.country}}</td>
+                <td>{{i.region}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

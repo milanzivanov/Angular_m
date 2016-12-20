@@ -1,0 +1,13 @@
+<html ng-app="myFirstModule">
+  <head>
+    <title>log service</title>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="LogController.js"></script>
+  </head>
+  <body ng-controller="LogController">
+    <h1>$log example</h1>
+    <!-- Na click događaj se poziva funkcija $scope.trigger koja ispisuje logove (pogledati konzolu) -->
+    <div><button type="button" ng-click="trigger()">Trigger logs</button></div>
+  </body>
+</html>

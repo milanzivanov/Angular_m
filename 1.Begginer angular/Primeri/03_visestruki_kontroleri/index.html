@@ -1,0 +1,21 @@
+<html ng-app="myFirstModule">
+  <head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="HelloWorldController.js"></script>
+    <script src="WeatherController.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="HelloWorldController">
+      <h1> {{message}}</h1> <!-- Traži se message property ($scope.message) u $scope-u HelloWorldController-a-->
+    </div>
+    
+    <hr>
+
+    <div ng-controller="WeatherController">
+      <h1> {{message}}</h1> <!-- Traži se message property ($scope.message) u $scope-u WeatherController-a-->
+    </div>
+
+  </body>
+</html>

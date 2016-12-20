@@ -1,0 +1,7 @@
+.state-form input.ng-invalid.ng-touched {
+	background-color: #FA787E;
+}
+
+.state-form input.ng-valid.ng-touched {
+	background-color: #78FA89;
+}

@@ -1,0 +1,19 @@
+<html ng-app="myFirstModule">
+  <head>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="HelloWorldController.js"></script>
+  </head>
+  <body>
+
+    <div ng-controller="HelloWorldController">
+      <!-- ng-click: klikom na dugme pozivamo funckiju toggleHidden() koja menja vrednost $scope.hidden -->
+      <input type="submit" ng-click="toggleHidden()" value="Click me!">
+    
+      <!-- div se prikazuje samo ukoliko je $scope.hidden == false-->
+      <div ng-hide="hidden">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in interdum orci. Nam quis massa ut velit mollis laoreet. Nam malesuada arcu vitae porttitor ultrices. Donec nisl ante, iaculis at venenatis nec, tincidunt sed quam. Maecenas molestie porta ante, ac convallis nisl consectetur quis. Morbi laoreet in purus et posuere. Curabitur vestibulum, erat ut vestibulum interdum, lectus diam euismod metus, eu accumsan nisl sem sed dui. Aliquam aliquam orci ligula. 
+      </div>
+    </div>
+  </body>
+</html>

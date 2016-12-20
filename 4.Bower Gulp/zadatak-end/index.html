@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Company Registry</title>
+	<link href="./dist/all.min.css" rel="stylesheet">
+</head>
+<body ng-app="company-registry">
+	<div class="container-fluid">
+		<div class="row" ui-view="header"></div>
+		<div class="row">
+			<div class="col-sm-2" ui-view="side-bar"></div>
+			<div class="col-sm-10" ui-view="content"></div>
+		</div>
+	</div>
+	<script src="./dist/vendor.min.js"></script>
+	<script src="./dist/all.min.js"></script>
+</body>
+</html>

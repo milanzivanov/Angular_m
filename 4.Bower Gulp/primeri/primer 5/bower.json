@@ -1,0 +1,9 @@
+{
+  "name": "eSport",
+  "description": "Internet portal for sports and similar activities",
+  "dependencies": {
+    "angular": "latest",
+    "angular-resource": "^1.2.0",
+    "angular-route": "1.x"
+  }
+}

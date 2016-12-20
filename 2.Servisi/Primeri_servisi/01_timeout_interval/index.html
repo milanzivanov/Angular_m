@@ -1,0 +1,19 @@
+<html ng-app="myFirstModule">
+  <head>
+    <title>Interval service</title>
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="TimerController.js"></script>
+  </head>
+  <!-- body tagom upravlja TimerController  -->
+  <body ng-controller="TimerController">
+    <h1>$interval example</h1>
+    
+    <!-- Prikazuje vrednost $scope.secondsLeft -->
+    <div>Text will be shown after {{ secondsLeft }} seconds </div>
+    <!-- Na click događaj se poziva funkvija $scope.cancelCountdown koja prekida odbrojavanje -->
+    <div><button type="button" ng-click="cancelCountdown()">Click to cancel countdown</buttom></div>
+    <div ng-show="showText" ng-include="'LoremIpsum.html'"></div>
+
+  </body>
+</html>

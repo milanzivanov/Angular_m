@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wineModule">
+<head>
+  <meta charset="UTF-8">
+  <title>Wine cellar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+  <script src="jquery-1.11.0.js"></script>
+  <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+
+  <script src="angular_1_4.js"></script>
+  <script src="app.js"></script>
+  <script src="MainController.js"></script>
+  <script src="WinesController.js"></script>
+  <script src="AddWineController.js"></script>
+  <style>
+  .affix {
+    top: 0;
+    width: 100%;
+    z-index:9999;
+  }
+
+  .affix + .container-fluid {
+    padding-top: 70px;
+  }
+  </style>
+</head>
+<body>
+  <div ng-include="'Header.html'"></div>
+
+  <div ng-controller="MainController">
+    <div ng-include="'Navbar.html'"></div>
+    <div ng-show="showPanels.showWineTable" ng-include="'LoremIpsum.html'"></div>
+
+    <div ng-show="showPanels.showWineTable" ng-include="'WineTable.html'"></div>
+    <div ng-show="showPanels.showAddWine" ng-include="'AddWine.html'"></div>
+  </div>
+</body>
+</html>

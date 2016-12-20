@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directives - scope</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="MainAppController as ma">
+	<h2 class="col-xs-offset-2">Directives - scope</h2>
+	<shared-scope></shared-scope>
+	<inherited-scope></inherited-scope>
+	<isolated-scope></isolated-scope>
+</div>
+<script src="./assets/js/angular.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/controllers/app.controller.js"></script>
+<script src="./app/directives/sharedScope.directive.js"></script>
+<script src="./app/directives/inheritedScope.directive.js"></script>
+<script src="./app/directives/isolatedScope.directive.js"></script>
+</body>
+</html>

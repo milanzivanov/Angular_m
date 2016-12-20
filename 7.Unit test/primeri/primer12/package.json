@@ -1,0 +1,16 @@
+{
+  "author": "Pera Perić",
+  "name": "tests",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-exit": "0.0.2",
+    "gulp-protractor": "^1.0.0",
+    "gulp-webserver": "^0.9.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.2.2",
+    "protractor": "^2.4.0",
+    "selenium-server-standalone-jar": "^2.47.1"
+  }
+}

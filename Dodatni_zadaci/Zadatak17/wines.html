@@ -1,0 +1,20 @@
+<table class="table table-stripped">
+	<thead>
+		<th>Name <button class="btn btn-link" ng-click="sort('name')"><span class="glyphicon glyphicon-sort"></span></button></th>
+		<th>Year <button class="btn btn-link" ng-click="sort('year')"><span class="glyphicon glyphicon-sort"></span></th>
+		<th>Grapes <button class="btn btn-link" ng-click="sort('grapes')"><span class="glyphicon glyphicon-sort"></span></th>
+		<th>Country <button class="btn btn-link" ng-click="sort('country')"><span class="glyphicon glyphicon-sort"></span></th>
+		<th>Region <button class="btn btn-link" ng-click="sort('region')"><span class="glyphicon glyphicon-sort"></span></th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="wine in wines">
+			<td>{{wine.name}}</td>
+			<td>{{wine.year}}</td>
+			<td>{{wine.grapes}}</td>
+			<td>{{wine.country}}</td>
+			<td>{{wine.region}}</td>
+			<td><a href="#/main/wines/{{wine._id}}">update</a></td>
+			<td><button class="btn btn-link" ng-click="deleteWine(wine._id)">delete</button></td>
+		</tr>
+	</tbody>
+</table>

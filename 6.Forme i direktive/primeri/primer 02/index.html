@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form and control state example</title>
+	<link href="./assets/css/bootstrap.css" rel="stylesheet">
+	<link href="./assets/css/stateForm.css" rel="stylesheet">
+</head>
+<body ng-app="app">
+<div class="container" ng-controller="FormController as form">
+	<h2 class="col-xs-offset-2">Form and control state example</h2>
+	<form novalidate class="state-form form-horizontal" name="form.stateForm">
+		<div class="form-group">
+			<label class="control-label col-xs-2" for="inputName">Name</label>
+    		<div class="col-xs-6"><input class="form-control" type="text" id="inputName" name="inputName" ng-model="form.user.name" required/></div>
+    	</div>
+    	<div class="form-group">
+			<label class="control-label col-xs-2" for="inputEmail">E-mail</label>
+    		<div class="col-xs-6"><input class="form-control col-xs-10" type="email" id="inputEmail" name="inputEmail" ng-model="form.user.email" required/></div>
+    	</div>
+    	<div class="form-group">
+			<label class="control-label col-xs-2" for="inputGender">Gender</label>
+			<div class="col-xs-6">
+				<label class="radio-inline"><input type="radio" ng-model="form.user.gender" value="male" >male</label>
+				<label class="radio-inline"><input type="radio" ng-model="form.user.gender" value="female" >female</label>
+			</div>
+    	</div>
+    	<div class="form-group">
+    		<div class="col-xs-offset-2 col-xs-6">
+				<input class="btn btn-primary" type="submit" ng-click="form.update(form.user)" value="Save" />
+				<input class="btn btn-danger" type="button" ng-click="form.reset()" value="Reset" />
+			</div>
+    	</div>
+	</form>
+	<br />
+	<div class="col-xs-offset-2 col-xs-6">
+		<pre>user = {{form.user | json}}</pre>
+  		<pre>master = {{form.master | json}}</pre>
+	</div>
+</div>
+<script src="./assets/js/angular.min.js"></script>
+<script src="./app/app.module.js"></script>
+<script src="./app/controllers/form.controller.js"></script>
+</body>
+</html>

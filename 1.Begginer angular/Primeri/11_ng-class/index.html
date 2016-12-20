@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ng-class</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <script src="angular.js"></script>
+  <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css"> 
+  <script src="jquery-1.11.0.js"></script>
+  <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <h1>Dinamicko postavljanje class atributa pomocu ng-class</h1>
+    <p>Probati: text-danger, bg-danger, text-success, ...</p>
+
+    <hr>
+    <h2>Primer String izraza</h2>
+    <!-- za vrednost class atributa će se postaviti vrednost smeštena u $scope.textType -->
+    <h3 ng-class="textType">Some text</h3>
+    <!-- pomoću ng-model se property-ju $scope.textType postavlja vrednost koju je korisnik uneo u input -->
+    <input type="text" ng-model="textType">
+    
+    <hr>
+    <h2>Primer niza vrednosti</h2>
+    <!-- isto kao prethodni primer ali će class atribut dobiti više vrednosti, npr. class="text-danger bg-danger" -->
+    <h3 ng-class="[style1, style2]">Some text</h3>
+    Prvi stil: <input type="text" ng-model="style1">
+    Drugi stil: <input type="text" ng-model="style2">
+
+    <hr>
+    <h2>Primer iraza</h2>
+    <!-- class="text-success" samo ukoliko je $scope.txSuccess == true. -->
+    <h3 ng-class="{ 'text-success': txSuccess, 'bg-success': bgSuccess}">Some text</h3>
+    <!-- Ukoliko je checkbox čekiran, putem ng-model se postavlja $scope.txSuccess=true  -->
+    <div>Text success: <input type="checkbox" ng-model="txSuccess"></div>
+    <div>Background success: <input type="checkbox" ng-model="bgSuccess"></div>
+
+  </div>
+</body>
+</html>

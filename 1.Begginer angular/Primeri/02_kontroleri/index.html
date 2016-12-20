@@ -1,0 +1,21 @@
+<html ng-app="myFirstModule"> <!-- Ime modula stavljamo u ng-app, ovim vezujemo modul za našu AngularJS aplikaciju -->
+  <head>
+    <!-- Paziti na redosled importa: 
+      1. angular.js 
+      2. app.js u kome je DEFINISAN modul myFirstModule
+      3. HelloWorldController.js u kome je definisan kontroler HelloWorldController. Mora se uljučiti posle app.js jer se u okviru HelloWorldController.js preuzima REFERENCA na modul kreiran u app.js radi registracije kontrolera u modulu 
+    -->
+    <script src="angular.js"></script>
+    <script src="app.js"></script>
+    <script src="HelloWorldController.js"></script>
+  </head>
+  <body>
+
+    <!-- HelloWorldController je odgovoran za deo strane gde je registrovan pomoću ng-controller direktive, u ovom slučaju u okviru h1 taga -->
+    <h1 ng-controller="HelloWorldController">
+      message: {{message}} <br/> <!-- message će se tražiti u scop-u HelloWorldController kontrolera ($scope.message) -->
+      message length: {{message.length}} <br/>      
+    </h1>
+
+  </body>
+</html>

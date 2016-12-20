@@ -1,0 +1,31 @@
+<div ng-controller="EmployeeDetailController as ec">
+    <form class="form-horizontal" name="ec.employeeForm" novalidate>
+    <div class="form-group" ng-class="{'has-error' : ec.employeeForm.jmbg.$touched && ec.employeeForm.jmbg.$invalid}" busy-indicator>
+    	<label class="control-label col-xs-2" for="jmbg">Jmbg</label>
+    	<div class="col-xs-6">
+    		<input class="form-control" type="text" id="jmbg" name="jmbg" ng-model="ec.employee.jmbg" ng-model-options="{ updateOn: 'default blur', debounce: {'default':1000, 'blur':0 } }" unique-jmbg required/>
+            <div ng-messages="ec.employeeForm.jmbg.$error" ng-show="ec.employeeForm.jmbg.$touched">
+                <p ng-message="uniqueJmbg">The JMBG needs to be unique.</p>
+                <p ng-message="required">The JMBG is required.</p>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-2" for="name">Name</label>
+        <div class="col-xs-6">
+            <input class="form-control" type="text" id="name" name="name" ng-model="ec.employee.name"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-2" for="surname">Surname</label>
+        <div class="col-xs-6">
+            <input class="form-control" type="text" id="surname" name="surname" ng-model="ec.employee.surname"/>
+        </div>
+    </div>
+    <div class="col-xs-offset-2">
+        <button class="btn" ng-click="ec.saveEmployee()" ng-class="{'btn-default':ec.employeeForm.$valid,'btn-warning':!ec.employeeForm.$valid}">Save</button>
+        <button class="btn btn-primary" ng-click="ec.reset()">Reset</button>
+        <a class="btn btn-default" href="#/">Back</a>
+    </div>
+    </form>
+</div>
