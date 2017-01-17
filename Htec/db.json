@@ -1,0 +1,82 @@
+{
+    "employees": [
+        {
+            "id": 0,
+            "name": "Marko",
+            "image": "images/bear.jpg",
+            "description": "Front end developer, new addition to our team. Fast learner and especially focused on new and emerging technologies.",
+            "animal": "bear"            
+        },
+        {
+            "id": 1,
+            "name": "Ana",
+            "image": "images/dolphin.jpg",
+            "description": "Charming girl, open minded and interested in learning new things. She had potential one day to be great HR manager",
+            "animal": "dolphin"           
+        },
+        {
+            "id": 2,
+            "name": "Dejan",
+            "image": "images/bull.jpg",
+            "description": "Gentle giant, a bit lazy but with a big heart! Lacks motivation for greater advancment in the field of data managment.",
+            "animal": "bull"            
+        },
+        {
+            "id": 3,
+            "name": "Maki",
+            "image": "images/cat.jpg",
+            "description": "Gamer girl, interested in all kinds of computer, board and card games. Has bright future ahead of her.",
+            "animal": "cat"            
+        },
+        {
+            "id": 4,
+            "name": "Jare",
+            "image": "images/tiger.jpg",
+            "description": "Full stack developer, likes all kinds of things but can't commit to any single one. Great guy to have on smaller projects",
+            "animal": "tiger"            
+        },
+        {
+            "id": 5,
+            "name": "Tea",
+            "image": "images/elephant.jpg",
+            "description": "Smart and new in the data managment field, she shows great perspecitive and good eye for details. Could be good designer one day!",
+            "animal": "elephant"            
+        },
+        {
+            "id": 6,
+            "name": "Igor",
+            "image": "images/hedgehog.jpg",
+            "description": "Back end developer, has been with us from the start. Dependable and reliable.",
+            "animal": "hedgehog"            
+        },
+        {
+            "id": 7,
+            "name": "Ena",
+            "image": "images/duck.jpg",
+            "description": "Young intern who is still in colledge. She has shown great persistance and has really endearing personality",
+            "animal": "duck"            
+        },
+        {
+            "id": 8,
+            "name": "Pedja",
+            "image": "images/fuchs.jpg",
+            "description": "Pedja is responsible for testing and maintainance of our products, he is indispensable part of our company!",
+            "animal": "fox"            
+        },
+        {
+            "id": 9,
+            "name": "Iva",
+            "image": "images/peacock-butterfly.jpg",
+            "description": "Iva is head IT recruiter, she has hired most of our web development team!",
+            "animal": "butterfly"            
+        },
+        {
+            "id": 10,
+            "name": "Marko",
+            "image": "images/squirrel.jpg",
+            "description": "Our CEO, always first to come and last to leave. Great example to all of us!",
+            "animal": "squirrel"            
+        }
+        
+    ]
+}

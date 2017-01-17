@@ -1,0 +1,22 @@
+.row-content {
+  margin: 0px auto;
+  padding: 30px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+#img-custom {
+  max-width: 300px;
+  margin-right: 10px;
+}
+#input-width {
+  min-width: 500px;
+}
+@media (max-width: 600px) {
+  #img-custom {
+    max-width: 200px;
+  }
+  #input-width {
+    min-width: auto;
+  }
+}
+
